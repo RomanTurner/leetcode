@@ -16,7 +16,7 @@ const findMissingRanges = (nums, lower, upper) => {
   const result = [];
   let prev = lower - 1;
 
-  for (let i = 0; i <= nums.length; i++) {
+  for (let i = 0; i <= nums.; i++) {
     let current = i < nums.length ? nums[i] : upper + 1;
     if (prev + 1 <= current - 1) {
       result.push(formatRange(prev + 1, current - 1));
