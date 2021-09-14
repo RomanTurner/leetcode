@@ -1,6 +1,6 @@
 /**
  * 
- * 
+ * Sieve of Eratosthenes
  * Count the number of prime numbers less than a non-negative number, n.
  * Input: n = 10
  * Output: 4
