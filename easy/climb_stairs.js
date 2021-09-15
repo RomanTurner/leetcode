@@ -1,3 +1,18 @@
+
+//Much more readable Dynamic approach 
+var climbStairs = function (n, map = {}) {
+  if (n < 0) {
+    return 0;
+  } else if (n === 0) {
+    return 1;
+  } else if (map[n] > -1) {
+    return map[n];
+  } else {
+    map[n] = climbStairs(n - 1, map) + climbStairs(n - 2, map);
+    return map[n];
+  }
+};
+
 var climbStairs = function (n) {
   if (n === 1) return 1;
   let dp = [];
@@ -16,15 +31,15 @@ Now we just have to find nth number of the fibonacci series having 11 and 22 the
 */
 
 function fibClimb(n) {
-    if (n == 1) {
-        return 1; 
-    }
-    let first = 1;
-    let second = 2;
-    for (let i = 0; i <= n; i++){
-        let third = first + second;
-        first = second;
-        second = third;
-    }
-    return second;
+  if (n == 1) {
+    return 1;
+  }
+  let first = 1;
+  let second = 2;
+  for (let i = 0; i <= n; i++) {
+    let third = first + second;
+    first = second;
+    second = third;
+  }
+  return second;
 }
