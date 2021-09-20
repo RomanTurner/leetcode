@@ -9,18 +9,19 @@ void add(int number) Adds number to the data structure.
 boolean find(int value) Returns true if there exists any pair of numbers whose sum is equal to value, otherwise, it returns false.
 */
 
-class TwoSum{
-    constructor(){
+class TwoSum {
+    constructor() {
         this.values = [];
         this.sumSet = new Set();
     }
     
-    add(num){
-        for(const element of this.values){
-            this.sumSet.add(element+num);
+    add(num) {
+        for (const element of this.values) {
+            this.sumSet.add(element + num);
         };
         this.values.push(num);
     }
-    find(num){
+    find(num) {
         return this.sumSet.has(num)
     }
+}
